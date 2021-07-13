@@ -5,7 +5,8 @@ Package components:
 Steps to install and run the package:
 
 1) Inside the package directory run the following command to install the setup file.
-    pip3 install -e .
+   
+   **pip3 install -e .**
 
 2) Run txt2output.py to generate the output.csv and log files.
 
