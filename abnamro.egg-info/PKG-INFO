@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: abnamro
+Version: 0.0.1
+Summary: Python test
+Home-page: UNKNOWN
+Author: Mudit Mittal
+Author-email: muditmittal2007@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: core package
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

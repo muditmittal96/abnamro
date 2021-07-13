@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+abnamro.egg-info/PKG-INFO
+abnamro.egg-info/SOURCES.txt
+abnamro.egg-info/dependency_links.txt
+abnamro.egg-info/not-zip-safe
+abnamro.egg-info/top_level.txt
+txt2csv/__init__.py

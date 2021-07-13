@@ -1,6 +1,8 @@
 import pandas as pd
 import operator
 import logging
+
+
 class Txt2csv:
     def __init__(self, input_file_name, specs_file_name):
         self.df = pd.read_csv(input_file_name, names=['Input'])
@@ -29,12 +31,13 @@ class Txt2csv:
             logging.error(f"Failed to create columns from {self.specs_file_name}!")
 
     def addCols(self, addcols_dict):
+        ops = {'+': operator.add, '-': operator.sub, 'x': operator.mul}
         for key,value in addcols_dict.items():
-            try:
+            # try:
                 self.df[key] = ops[value[1]](self.df[value[0]].astype('float'), self.df[value[2]].astype('float'))
-                logging.debug(f'{key} column successfully added!')
-            except:
-                logging.error(f'Failed to create {key} column!')
+                # logging.debug(f'{key} column successfully added!')
+            # except:
+            #     logging.error(f'Failed to create {key} column!')
 
 
     def createOutputFile(self, outputcols_dict, groupby_col, csv_headers):
@@ -46,14 +49,14 @@ class Txt2csv:
                 for key, value in outputcols_dict.items():
                     df_output[key] = df_output[value].apply(lambda row: '_'.join(row.values.astype(str)), axis=1)
                 df_final_output = df_output[csv_headers]
-                df_final_output.to_csv('Output.csv')
+                df_final_output.to_csv('Output.csv', index=False)
                 logging.debug('Successfuly created output.csv!')
             except:
                 logging.error('Failed to create output.csv!')
 
 if __name__ == '__main__':
 
-    ops = {'+': operator.add, '-': operator.sub, 'x': operator.mul}
+    # ops = {'+': operator.add, '-': operator.sub, 'x': operator.mul}
     addcols_dict = {'Total_Transaction_Amount':['Quantity_Long', '-', 'Quantity_Short']}
     outputcols_dict = {'Client_Information':['Client_Type', 'Client_Number', 'Account_Number', 'Subaccount_Number'],
                         'Product_Information':['Exchange_Code', 'Product_Group_Code', 'Symbol', 'Expiration_Date']
