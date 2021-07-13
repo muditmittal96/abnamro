@@ -10,3 +10,6 @@
 2021-07-13 16:35:20,622 DEBUG:All columns created from data/specifications.txt!
 2021-07-13 16:35:20,623 DEBUG:Total_Transaction_Amount column successfully added!
 2021-07-13 16:35:20,628 DEBUG:Successfuly created output.csv!
+2021-07-13 18:26:19,212 DEBUG:All columns created from data/specifications.txt!
+2021-07-13 18:26:19,226 DEBUG:Total_Transaction_Amount column successfully added!
+2021-07-13 18:26:19,232 DEBUG:Successfuly created output.csv!
